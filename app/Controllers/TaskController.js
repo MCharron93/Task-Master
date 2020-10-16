@@ -1,5 +1,5 @@
 import { ProxyState } from "../AppState.js"
-import { listService } from "../Services/ListService.js"
+// import { listService } from "../Services/ListService.js"
 import { taskService } from "../Services/TaskService.js"
 
 
@@ -7,11 +7,11 @@ import { taskService } from "../Services/TaskService.js"
 //   let tasks = ProxyState.tasks
 //   let template = ""
 //   tasks.forEach(t => template += t.Template)
-//   document.
+//   document.getElementById("task").innerHTML = template
 // }
 export default class TaskController {
   constructor() {
-    console.log("Task controller");
+    // console.log("Task controller");
   }
 
 

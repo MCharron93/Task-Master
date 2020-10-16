@@ -5,14 +5,14 @@ import { loadState, saveState } from "../Utils/LocalStorage.js"
 
 class TaskService {
   constructor() {
-    console.log("Task Service")
+    // console.log("Task Service")
     ProxyState.on("tasks", saveState)
   }
 
-  // deleteTask(id) {
-  //   ProxyState.tasks = ProxyState.tasks.filter(t => t.id != id)
-  //   console.log(ProxyState.tasks)
-  // }
+  deleteTask(id) {
+    ProxyState.tasks = ProxyState.tasks.filter(t => t.id != id)
+    console.log(ProxyState.tasks)
+  }
 
   createTask(newTask) {
     let tasks = ProxyState.tasks

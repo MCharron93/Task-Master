@@ -4,7 +4,7 @@ import { listService } from "../Services/ListService.js";
 
 
 //TODO Don't forget to render to the screen after every data change.
-function _drawLists() {
+function _draw() {
   let lists = ProxyState.lists
   let template = ""
   lists.forEach(l => template += l.Template)
@@ -16,8 +16,9 @@ function _drawLists() {
 export default class ListController {
   constructor() {
     //NOTE: Dont forget to register an event listener(s).
-    ProxyState.on("lists", _drawLists)
-    _drawLists();
+    ProxyState.on("lists", _draw)
+    ProxyState.on("tasks", _draw)
+    _draw();
   }
 
   removeList(id) {

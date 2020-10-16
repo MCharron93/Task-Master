@@ -13,20 +13,21 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-dark navbar-expand bg-dark text-light justify-content-around">
+        <nav class="navbar navbar-dark navbar-expand bg-dark text-light justify-content-between">
             <a class="navbar-brand" href="#">
                 <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
                 <span class="ml-2">Task Master</span>
             </a>
             <div class="row" id="form">
-                <form onsubmit="app.listController.createList(event)">
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="title" id="title" aria-describedby="helpId"
-                            placeholder="List Name">
-                    </div>
-                    <div>
-                        <button type="submit" class="btn btn-primary">Add List</button>
-                </form>
+                <span>
+                    <form onsubmit="app.listController.createList(event)">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="title" id="title" aria-describedby="helpId"
+                                placeholder="Add To-Do List">
+                        </div>
+                    </form>
+                </span>
+                <button type="submit" class="btn btn-primary">Add</button>
             </div>
         </nav>
     </header>

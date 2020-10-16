@@ -10,6 +10,7 @@ class TaskService {
   }
 
   deleteTask(id) {
+    debugger
     ProxyState.tasks = ProxyState.tasks.filter(t => t.id != id)
     console.log(ProxyState.tasks)
   }

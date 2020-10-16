@@ -13,9 +13,9 @@ export default class List {
 
   get Template() {
     return /*html*/`
-    <div class="col-4 card card-body">
-                <h3>Title Here</h3>
-                <div><button onclick="app.listController.removeList('${this.id}')">Remove List</button></div>
+    <div class="col-4 card card-body justify-content-around">
+    <span><h3>${this.title}</h3></span>
+                <button onclick="app.listController.removeList('${this.id}')">Remove List</button>
                 <form onsubmit="app.taskController.createTask(event,'${this.id}')">
                     <div class="form-group">
                         <input type="text" name="task" id="task" class="form-control" placeholder="create task"

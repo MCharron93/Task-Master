@@ -3,17 +3,14 @@ import { ProxyState } from "../AppState.js"
 import { taskService } from "../Services/TaskService.js"
 
 
-// function _drawTask() {
-//   let tasks = ProxyState.tasks
-//   let template = ""
-//   tasks.forEach(t => template += t.Template)
-//   document.getElementById("task").innerHTML = template
-// }
 export default class TaskController {
   constructor() {
     // console.log("Task controller");
   }
 
+  deleteTask(id) {
+    taskService.deleteTask(id)
+  }
 
   createTask(e, listId) {
     e.preventDefault();

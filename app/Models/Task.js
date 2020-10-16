@@ -13,7 +13,7 @@ export default class Task {
   get Template() {
     return /*html*/ `
     <div className="col-12">
-    <h6>${this.title} <button onclick="app.listController.deleteTask('${this.id}')">delete task</button></h6>
+    <h6>${this.title} <button onclick="app.taskController.deleteTask('${this.id}')">delete task</button></h6>
     </div>
     `
   }

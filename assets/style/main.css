@@ -4282,6 +4282,7 @@ input[type=button].btn-block {
   display: flex;
   flex-direction: column;
   min-width: 0;
+  max-width: 45vw;
   word-wrap: break-word;
   background-color: white;
   background-clip: border-box;

@@ -23,11 +23,12 @@
                     <form onsubmit="app.listController.createList(event)">
                         <div class="form-group">
                             <input type="text" class="form-control" name="title" id="title" aria-describedby="helpId"
-                                placeholder="Add To-Do List">
+                                placeholder="Add To-Do List"> <input type="color">
                         </div>
                     </form>
                 </span>
-                <button type="submit" class="btn btn-primary">Add</button>
+                <div class="">
+                    <button type="submit" class="btn btn-primary">Add</button></div>
             </div>
         </nav>
     </header>
@@ -35,8 +36,22 @@
         <div id="app">
         </div>
         <div class="row" id="list">
-
         </div>
+
+
+        <div class="col-4 p-2 border border-primary">
+            <div class="row p-3">
+                <h2 class="col-10">How large will this go? What happens</h2>
+                <button>Delete</button>
+            </div>
+            <div class="row p-3">
+                <h4 class="col-10">Input form here</h4>
+                <button>Add</button>
+            </div>
+            <div class="row p-3">
+                <div class="col-10">Tasks go here</div>
+                <button>X</button>
+            </div>
         </div>
     </main>
     <footer class="container-fluid bg-dark text-light">

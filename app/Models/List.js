@@ -4,7 +4,6 @@ import { ProxyState } from "../AppState.js"
 export default class List {
   constructor({ title, id }) {
     //TODO Your constructor takes in a data object that should have the properties you need to create your list here is a freebie, it will set the id its provided, or if that is undefined it will create a new one (this is an alternative to object destructuring)
-
     this.title = title
     this.id = id || generateId();
   }
@@ -13,17 +12,19 @@ export default class List {
 
   get Template() {
     return /*html*/`
-    <div class="col-4 card card-body justify-content-around">
-    <span><h3>${this.title}</h3></span>
-                <button onclick="app.listController.removeList('${this.id}')">Remove List</button>
+    <div class="col-4 p-4 card justify-content-around">
+    <div class="row justify-content-between"><h3>${this.title}</h3>
+                <button class="align-self-center" onclick="app.listController.removeList('${this.id}')">Remove List</button></div>
+                <div className="row">
                 <form onsubmit="app.taskController.createTask(event,'${this.id}')">
-                    <div class="form-group">
-                        <input type="text" name="task" id="task" class="form-control" placeholder="create task"
+                    <div class="row justify-content-between">
+                        <input type="text" name="task" id="task" class="col-6" placeholder="Create Task"
                             aria-describedby="helpId">
-                        <button type="submit">Add Task</button>
+                        <button class="col-3" type="submit">Add Task</button>
                     </div>
                 </form>
-                <h4>Tasks:</h4>
+                </div>
+                <h4 class="py-3">Tasks:</h4>
                 <div class="row">
                 ${this.Tasks}
                 </div>

@@ -19,7 +19,7 @@
                 <span class="ml-2">Task Master</span>
             </a>
             <div class="row" id="form">
-                <form onsubmit="app.listController.createList()">
+                <form onsubmit="app.listController.createList(event)">
                     <div class="form-group">
                         <input type="text" class="form-control" name="title" id="title" aria-describedby="helpId"
                             placeholder="List Name">

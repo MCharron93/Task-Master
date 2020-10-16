@@ -1,4 +1,5 @@
 import { generateId } from "../Utils/GenerateId.js";
+import { ProxyState } from "../AppState.js"
 
 export default class List {
   constructor({ title, id }) {
@@ -14,21 +15,26 @@ export default class List {
     return /*html*/`
     <div class="col-4 card card-body">
                 <h3>Title Here</h3>
-                <div><button onclick="app.listController.removeList('${this.id}')">Remove Task</button></div>
-                <form onsubmit="app.listController.createTask('${this.id}')">
+                <div><button onclick="app.listController.removeList('${this.id}')">Remove List</button></div>
+                <form onsubmit="app.taskController.createTask(event,'${this.id}')">
                     <div class="form-group">
                         <input type="text" name="task" id="task" class="form-control" placeholder="create task"
                             aria-describedby="helpId">
                         <button type="submit">Add Task</button>
                     </div>
                 </form>
+                <h4>Tasks:</h4>
+                <div class="row">
+                ${this.Tasks}
+                </div>
             </div>
     `
   }
 
-  get Task() {
-    return /*html*/ `
-    
-    `
+  get Tasks() {
+    let template = ""
+    let tasks = ProxyState.tasks.filter(t => t.listId == this.id)
+    tasks.forEach(t => template += t.Template)
+    return template
   }
 }

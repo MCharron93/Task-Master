@@ -1,8 +1,12 @@
 import { ProxyState } from "../AppState.js"
-import List from "../Models/List.js";
+import List from "../Models/List.js"
+import { loadState, saveState } from "../Utils/LocalStorage.js"
 
 //Public
 class ListService {
+  constructor() {
+    ProxyState.on("lists", saveState)
+  }
   removeList(id) {
     // console.log("Remove list")
     let temp = ProxyState.lists
@@ -12,7 +16,6 @@ class ListService {
   }
   createList(newList) {
     let createdList = new List(newList)
-
     let lists = [...ProxyState.lists, createdList]
     ProxyState.lists = lists
     // console.log(createdList)

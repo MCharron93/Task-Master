@@ -1,6 +1,8 @@
 import { ProxyState } from "../AppState.js"
 import { listService } from "../Services/ListService.js";
 
+
+
 //TODO Don't forget to render to the screen after every data change.
 function _drawLists() {
   let lists = ProxyState.lists
@@ -22,14 +24,15 @@ export default class ListController {
     listService.removeList(id)
     // console.log("Remove List")
   }
-  createList() {
-    event.preventDefault();
-    let form = event.target
+  createList(e) {
+    e.preventDefault();
+    let form = e.target
     let newList = {
       // @ts-ignore
       title: form.title.value
     }
     listService.createList(newList)
+    form.reset()
     // console.log("Creating list")
   }
 

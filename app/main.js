@@ -1,5 +1,8 @@
-class App {
+import ListController from "./Controllers/ListController.js"
+import { loadState } from "./Utils/LocalStorage.js"
 
+class App {
+  listController = new ListController();
 
   // TODO load your controllers here
 }

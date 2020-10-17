@@ -26,11 +26,13 @@ export default class ListController {
     // console.log("Remove List")
   }
   createList(e) {
+    debugger
     e.preventDefault();
     let form = e.target
     let newList = {
       // @ts-ignore
-      title: form.title.value
+      title: form.title.value,
+      color: form.color.value
     }
     listService.createList(newList)
     form.reset()

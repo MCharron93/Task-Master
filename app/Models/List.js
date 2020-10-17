@@ -2,9 +2,10 @@ import { generateId } from "../Utils/GenerateId.js";
 import { ProxyState } from "../AppState.js"
 
 export default class List {
-  constructor({ title, id }) {
+  constructor({ title, color, id }) {
     //TODO Your constructor takes in a data object that should have the properties you need to create your list here is a freebie, it will set the id its provided, or if that is undefined it will create a new one (this is an alternative to object destructuring)
     this.title = title
+    this.color = color
     this.id = id || generateId();
   }
   //Be sure to add the methods needed to create the view template for this model
@@ -12,7 +13,7 @@ export default class List {
 
   get Template() {
     return /*html*/`
-    <div class="col-4 p-4 card justify-content-around">
+    <div class="col-4 p-4 card justify-content-around" style="background-color: ${this.color}">
     <div class="row justify-content-between"><h3>${this.title}</h3>
                 <button class="align-self-center" onclick="app.listController.removeList('${this.id}')">Remove List</button></div>
                 <div className="row">

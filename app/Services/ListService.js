@@ -19,6 +19,7 @@ class ListService {
     }
   }
   createList(newList) {
+    debugger
     let createdList = new List(newList)
     let lists = [...ProxyState.lists, createdList]
     ProxyState.lists = lists

@@ -13,11 +13,11 @@ export default class List {
 
   get Template() {
     return /*html*/`
-    <div class="col-4 p-3 card justify-content-around" style="background-color: ${this.color}">
-    <div class="row justify-content-between"><h3>${this.title}</h3>
-                <button class="align-self-center" onclick="app.listController.removeList('${this.id}')">X</button></div>
-                <div className="row p-2">
-                <form onsubmit="app.taskController.createTask(event,'${this.id}')">
+    <div class="col-4 p-2 card justify-content-around" style="background-color: ${this.color}">
+    <div class="row p-2 justify-content-between"><h3>${this.title}</h3>
+                <button class="content-fit" onclick="app.listController.removeList('${this.id}')">X</button></div>
+                <div className="row p-4">
+                <form onsubmit="app.taskController.createTask(event,'${this.id}')" class="p-2">
                     <div class="row justify-content-between">
                         <input type="text" name="task" id="task" class="col-6" placeholder="Create Task"
                             aria-describedby="helpId">
@@ -26,7 +26,7 @@ export default class List {
                 </form>
                 </div>
                 <h4 class="py-3">Tasks:</h4>
-                <div class="row">
+                <div class="row justify-content-between p-2">
                 ${this.Tasks}
                 </div>
             </div>

@@ -13,21 +13,20 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-dark navbar-expand bg-dark text-light justify-content-between">
-            <a class="navbar-brand" href="#">
+        <nav class="row navbar navbar-dark navbar-expand bg-dark text-light justify-content-even">
+            <a class="col navbar-brand" href="#">
                 <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
                 <span class="ml-2">Task Master</span>
             </a>
-            <div class="row" id="form">
-                <span>
-                    <form onsubmit="app.listController.createList(event)">
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="title" id="title" aria-describedby="helpId"
-                                placeholder="Add To-Do List"> <input name="color" id="color" type="color">
-                        </div>
-                </span>
-                <div class="">
-                    <button type="submit" class="btn btn-primary">Add</button></div>
+            <div class="col-6" id="form">
+                <div class="row">
+                    <form class="col" onsubmit="app.listController.createList(event)">
+                        <div class="row justify-content-around">
+                            <input type="text" class="col-9" name="title" id="title" aria-describedby="helpId"
+                                placeholder="Add To-Do List"> <input name="color" id="color" type="color"
+                                class="align-self-center">
+                            <button type="submit" class="btn btn-primary">Add</button></div>
+                </div>
             </div>
             </form>
         </nav>
@@ -35,7 +34,7 @@
     <main class="container-fluid">
         <div id="app">
         </div>
-        <div class="row" id="list">
+        <div class="row text-center" id="list">
         </div>
 
 

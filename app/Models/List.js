@@ -13,15 +13,15 @@ export default class List {
 
   get Template() {
     return /*html*/`
-    <div class="col-4 p-4 card justify-content-around" style="background-color: ${this.color}">
+    <div class="col-4 p-3 card justify-content-around" style="background-color: ${this.color}">
     <div class="row justify-content-between"><h3>${this.title}</h3>
-                <button class="align-self-center" onclick="app.listController.removeList('${this.id}')">Remove List</button></div>
-                <div className="row">
+                <button class="align-self-center" onclick="app.listController.removeList('${this.id}')">X</button></div>
+                <div className="row p-2">
                 <form onsubmit="app.taskController.createTask(event,'${this.id}')">
                     <div class="row justify-content-between">
                         <input type="text" name="task" id="task" class="col-6" placeholder="Create Task"
                             aria-describedby="helpId">
-                        <button class="col-3" type="submit">Add Task</button>
+                        <button class="content-fit" type="submit">+</button>
                     </div>
                 </form>
                 </div>

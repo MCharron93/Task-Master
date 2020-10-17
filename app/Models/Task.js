@@ -14,7 +14,7 @@ export default class Task {
     return /*html*/ `
     <div class="col-12 d-flex justify-content-between">
         <input type="checkbox" name="checkbox" id="checkbox" class="align-self-center">
-    <h6 class="text-left align-self-center">${this.title}</h6><button type="button" onclick="app.taskController.deleteTask('${this.id}')" class="btn">
+    <h5 class="text-left align-self-center">${this.title}</h5><button type="button" onclick="app.taskController.deleteTask('${this.id}')" class="btn">
     <span aria-hidden="true"><i class="fas fa-minus-circle"></i></span>
   </button></div>
     `

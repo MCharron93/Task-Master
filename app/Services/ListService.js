@@ -9,7 +9,23 @@ class ListService {
   }
   removeList(id) {
     // console.log("Remove list")
-    let d = confirm("Are you sure you want to delete?")
+    let d = Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        )
+      }
+    })
     if (d) {
       let temp = ProxyState.lists
       let listIndex = temp.findIndex(l => l.id == id)
@@ -22,6 +38,14 @@ class ListService {
     let createdList = new List(newList)
     let lists = [...ProxyState.lists, createdList]
     ProxyState.lists = lists
+    // @ts-ignore
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'You made a new list!',
+      showConfirmButton: false,
+      timer: 1500
+    })
     // console.log(createdList)
   }
   //TODO  Here is where we handle all of our business logic,

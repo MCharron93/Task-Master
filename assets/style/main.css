@@ -19,8 +19,8 @@
   --white: white;
   --gray: #4F4F4F;
   --gray-dark: darkslategray;
-  --primary: #3BA5DC;
-  --secondary: #FF3697;
+  --primary: #4e7385;
+  --secondary: #ac336e;
   --success: #27AE60;
   --info: #00C9BD;
   --warning: #FF7F50;
@@ -171,7 +171,7 @@ a:not([href]):not([class]):hover {
 }
 
 ::placeholder{
-  color: rgb(68, 60, 60);
+  color: rgb(100, 83, 83);
 }
 
 #task{

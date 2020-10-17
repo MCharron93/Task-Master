@@ -12,9 +12,11 @@ export default class Task {
 
   get Template() {
     return /*html*/ `
-    <div class="btn">
-        <input type="checkbox" name="title" id="title" checked autocomplete="off">
-    </div><h6 class="justify-self-left">${this.title}</h6><button onclick="app.taskController.deleteTask('${this.id}')">X</button>
+    <div class="col-12 d-flex justify-content-between">
+        <input type="checkbox" name="checkbox" id="checkbox" class="align-self-center">
+    <h6 class="text-left align-self-center">${this.title}</h6><button type="button" onclick="app.taskController.deleteTask('${this.id}')" class="btn">
+    <span aria-hidden="true"><i class="fas fa-minus-circle"></i></span>
+  </button></div>
     `
   }
 

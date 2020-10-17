@@ -26,7 +26,6 @@ export default class ListController {
     // console.log("Remove List")
   }
   createList(e) {
-    debugger
     e.preventDefault();
     let form = e.target
     let newList = {

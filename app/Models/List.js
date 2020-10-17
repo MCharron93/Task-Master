@@ -15,18 +15,17 @@ export default class List {
     return /*html*/`
     <div class="col-4 p-2 card justify-content-around" style="background-color: ${this.color}">
     <div class="row p-2 justify-content-between"><h3>${this.title}</h3>
-                <button class="content-fit" onclick="app.listController.removeList('${this.id}')">X</button></div>
+                <button class="btn" onclick="app.listController.removeList('${this.id}')"><span aria-hidden="true"><i class="fas fa-minus-circle"></i></span></button></div>
                 <div className="row p-4">
                 <form onsubmit="app.taskController.createTask(event,'${this.id}')" class="p-2">
                     <div class="row justify-content-between">
-                        <input type="text" name="task" id="task" class="col-6" placeholder="Create Task"
-                            aria-describedby="helpId">
-                        <button class="content-fit" type="submit">+</button>
+                        <input type="text" name="task" id="task" class="col-6" placeholder="Create Task">
+                        <button class="btn" type="submit"><i class="fas fa-plus"></i></button>
                     </div>
                 </form>
                 </div>
                 <h4 class="py-3">Tasks:</h4>
-                <div class="row justify-content-between p-2">
+                <div class="row p-2">
                 ${this.Tasks}
                 </div>
             </div>

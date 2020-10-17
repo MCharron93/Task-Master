@@ -12,14 +12,13 @@ class ListService {
     let d = confirm("Are you sure you want to delete?")
     if (d) {
       let temp = ProxyState.lists
-      let listIndex = temp.find(l => l.id == id)
+      let listIndex = temp.findIndex(l => l.id == id)
       // @ts-ignore
       temp.splice(listIndex, 1)
       ProxyState.lists = temp
     }
   }
   createList(newList) {
-    debugger
     let createdList = new List(newList)
     let lists = [...ProxyState.lists, createdList]
     ProxyState.lists = lists

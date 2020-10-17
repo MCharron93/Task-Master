@@ -23,10 +23,10 @@
                 <div class="row">
                     <form class="col" onsubmit="app.listController.createList(event)">
                         <div class="row justify-content-around">
-                            <input type="text" class="col-9" name="title" id="title" aria-describedby="helpId"
-                                placeholder="Add To-Do List"> <input name="color" id="color" type="color"
-                                class="align-self-center">
-                            <button type="submit" class="btn btn-primary">Add</button></div>
+                            <input type="text" class="col-9" name="title" id="title" placeholder="Add To-Do List">
+                            <input name="color" id="color" type="color" value="#928B8B"
+                                class="align-self-center rounded">
+                            <button type="submit" class="btn text-light"><i class="fas fa-plus"></i></button></div>
                 </div>
             </div>
             </form>
@@ -35,24 +35,9 @@
     <main class="container-fluid">
         <div id="app">
         </div>
-        <div class="row text-center" id="list">
+        <div class="row text-center py-3 justify-content-around" id="list">
         </div>
 
-
-        <div class="col-4 p-2 border border-primary">
-            <div class="row p-3">
-                <h2 class="col-10">How large will this go? What happens</h2>
-                <button>Delete</button>
-            </div>
-            <div class="row p-3">
-                <h4 class="col-10">Input form here</h4>
-                <button>Add</button>
-            </div>
-            <div class="row p-3">
-                <div class="col-10">Tasks go here</div>
-                <button>X</button>
-            </div>
-        </div>
     </main>
     <footer class="container-fluid bg-dark text-light">
         <div class="row text-center">
@@ -63,6 +48,7 @@
     </footer>
 
     <script src="app/main.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/9d76fee42e.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

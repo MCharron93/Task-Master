@@ -19,7 +19,7 @@ export default class List {
                 <div className="row p-4">
                 <form onsubmit="app.taskController.createTask(event,'${this.id}')" class="p-2">
                     <div class="row justify-content-between">
-                        <input type="text" name="task" id="task" class="col-6" placeholder="Create Task">
+                        <input type="text" name="task" id="${this.id}" class="col-6 input-clear" placeholder="Create Task">
                         <button class="btn" type="submit"><i class="fas fa-plus"></i></button>
                     </div>
                 </form>

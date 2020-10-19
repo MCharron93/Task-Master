@@ -18,7 +18,8 @@ export default class TaskController {
     let form = e.target
     let newTask = {
       title: form.task.value,
-      listId: listId
+      listId: listId,
+      completed: false
     }
     taskService.createTask(newTask)
     form.reset()

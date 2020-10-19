@@ -422,6 +422,14 @@ h6, .h6 {
   line-height: 1.2;
 }
 
+.input-clear{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: inherit;
+  border-bottom: 1px solid darkgrey;
+}
+
 hr {
   margin-top: 1rem;
   margin-bottom: 1rem;

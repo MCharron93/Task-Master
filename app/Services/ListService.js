@@ -8,7 +8,6 @@ class ListService {
     ProxyState.on("lists", saveState)
   }
   removeList(id) {
-    debugger
     // console.log("Remove list")
     let d = Swal.fire({
       title: 'Are you sure?',
@@ -25,6 +24,7 @@ class ListService {
         // @ts-ignore
         temp.splice(listIndex, 1)
         ProxyState.lists = temp
+        // @ts-ignore
         Swal.fire(
           'Deleted!',
           'Your file has been deleted.',
@@ -32,8 +32,6 @@ class ListService {
         )
       }
     })
-    if (d) {
-    }
   }
   createList(newList) {
     let createdList = new List(newList)

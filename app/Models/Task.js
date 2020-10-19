@@ -7,13 +7,14 @@ export default class Task {
     this.title = data.title
     this.id = data.id || generateId();
     this.listId = data.listId
+    this.completed = data.completed || false
   }
   //Be sure to add the methods needed to create the view template for this model
 
   get Template() {
     return /*html*/ `
     <div class="col-12 d-flex justify-content-between">
-        <input type="checkbox" name="checkbox" id="checkbox" class="align-self-center">
+        <input type="checkbox" ${this.completed ? "checked" : ""} name="checkbox" id="checkbox" class="align-self-center">
     <h5 class="text-left align-self-center">${this.title}</h5><button type="button" onclick="app.taskController.deleteTask('${this.id}')" class="btn">
     <span aria-hidden="true"><i class="fas fa-minus-circle"></i></span>
   </button></div>

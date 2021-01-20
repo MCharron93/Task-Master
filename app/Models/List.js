@@ -13,7 +13,7 @@ export default class List {
 
   get Template() {
     return /*html*/`
-    <div class="col-4 p-2 card justify-content-around" style="background-color: ${this.color}">
+    <div class="col-4 p-2 card justify-content-around shadow-lg" style="background-color: ${this.color}">
     <div class="row p-2 justify-content-between"><h3>${this.title}</h3>
                 <button class="btn" onclick="app.listController.removeList('${this.id}')"><span aria-hidden="true"><i class="fas fa-minus-circle"></i></span></button></div>
                 <div className="row p-4">

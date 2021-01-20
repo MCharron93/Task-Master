@@ -1,0 +1,14 @@
+.bi{
+  font-size: x-large;
+  color: yellow;
+}
+.fa-plus{
+  font-size: x-large;
+  color: yellow;
+}
+.fa-plus:hover{
+  color: purple;
+}
+small{
+  color: yellow;
+}

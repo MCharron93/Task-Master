@@ -9,6 +9,7 @@ class ListService {
   }
   removeList(id) {
     // console.log("Remove list")
+    // @ts-ignore
     let d = Swal.fire({
       title: 'Are you sure?',
       text: "You won't be able to revert this!",
